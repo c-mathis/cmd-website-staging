@@ -187,7 +187,7 @@
       '<div class="cmd-consent__inner">' +
         '<div class="cmd-consent__copy">' +
           '<h2 id="cmd-consent-title">Your privacy choices</h2>' +
-          '<p>We use optional analytics to understand site performance and optional marketing tools to measure campaigns. Required site storage always stays on. See our <a href="/privacy-policy">Privacy Policy</a>.</p>' +
+          '<p>We use optional analytics to understand site performance and optional marketing tools to measure campaigns. Required site storage always stays on. See our <a href="/cmd-website-staging/privacy-policy">Privacy Policy</a>.</p>' +
         '</div>' +
         '<div class="cmd-consent__actions">' +
           '<button type="button" class="cmd-consent__button cmd-consent__button--primary" data-cmd-consent="accept">Accept all</button>' +
