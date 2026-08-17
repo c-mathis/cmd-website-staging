@@ -1,0 +1,4 @@
+/* Page-specific styles for boring-legal-stuff.html. Shared styles belong in ../site.css. */
+
+/* boring-legal-stuff: extracted style block 1 */
+@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="b4a9c384-534d-51f7-3de0-0055afb08c0f"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="8b5e8c7a-6327-2f51-d5cc-9ff1b456880a"] {opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="f8b406c8-2615-3d14-ba5b-6f656edeece3"] {opacity:0;}}@media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="f8b406c8-2615-3d14-ba5b-6f656edeece3"] {opacity:0;}}@media (max-width:479px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="f8b406c8-2615-3d14-ba5b-6f656edeece3"] {opacity:0;}}

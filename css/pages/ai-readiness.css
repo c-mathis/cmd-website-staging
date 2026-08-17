@@ -1,0 +1,13 @@
+/*
+ * AI Readiness uses the current /websites landing-page visual system. This file
+ * only maps the older semantic utility classes already present in the page to
+ * the shared modular type scale; the page copy and section structure stay intact.
+ */
+
+.wsvc-page main h2.heading-large {
+  font-size: var(--wsvc-type-section);
+}
+
+.wsvc-page main .text-size-medium {
+  font-size: var(--wsvc-type-body);
+}

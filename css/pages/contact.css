@@ -1,0 +1,104 @@
+/* Page-specific styles for contact.html. Shared styles belong in ../site.css. */
+
+/* contact: extracted style block 1 */
+/* Contact form page-specific styles */
+    .contact-form-block {
+      margin-top: 2rem;
+    }
+    .contact-form-block .form-field-wrapper {
+      margin-bottom: 1.5rem;
+    }
+    .contact-form-block .field-label {
+      font-family: FK Grotesk Neue, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: .5rem;
+      display: block;
+    }
+    .contact-form-block .form-input {
+      width: 100%;
+    }
+    .contact-form-block .form-fieldset {
+      border: 0;
+      padding: 0;
+      min-width: 0;
+    }
+    .contact-form-block .form-checkbox-label a {
+      text-decoration: underline;
+      text-underline-offset: .15em;
+    }
+
+    /* Radio button group */
+    .form-radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+
+    /* Select dropdown arrow */
+    .form-input.is-select-input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23000' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .75rem center;
+      padding-right: 2.5rem;
+    }
+
+    /* Honeypot field - hidden from humans */
+    .contact-hp-field {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      pointer-events: none;
+      tab-index: -1;
+    }
+
+    /* Success / error states */
+    .contact-success {
+      display: none;
+      padding: 3rem 0;
+    }
+    .contact-success.is-visible {
+      display: block;
+    }
+    .contact-error {
+      display: none;
+      color: #c0392b;
+      margin-top: 1rem;
+      font-family: FK Grotesk Neue, sans-serif;
+      font-size: .95rem;
+    }
+    .contact-error.is-visible {
+      display: block;
+    }
+
+    /* Submit button loading state */
+    .contact-submit-btn {
+      cursor: pointer;
+      border: 2px solid var(--black);
+      background: transparent;
+      width: auto;
+    }
+    .contact-submit-btn .button-text {
+      transition: opacity .2s;
+    }
+    .contact-submit-btn.is-loading .button-text {
+      opacity: .5;
+    }
+    .contact-submit-btn:disabled {
+      cursor: not-allowed;
+      opacity: .6;
+    }
+
+    /* Checkbox consent label text wrapping */
+    .form-checkbox-label.is-consent,
+    .form-radio-label {
+      white-space: normal;
+      line-height: 1.5;
+    }
