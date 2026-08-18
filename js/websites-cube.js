@@ -2,7 +2,7 @@ const slot = document.querySelector('[data-cmd-cube]');
 
 if (slot) {
   const video = slot.querySelector('.wsvc-cube-video');
-  const source = video.querySelector('source');
+  const sources = [...video.querySelectorAll('source')];
   const poster = slot.querySelector('.wsvc-cube-poster');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let alphaSupported = false;
@@ -108,7 +108,15 @@ if (slot) {
 
   video.addEventListener('loadeddata', handleMediaReady, { once: true });
   video.addEventListener('error', () => setPosterState('poster-fallback'));
-  if (source) source.addEventListener('error', () => setPosterState('poster-fallback'));
+  let failedSources = 0;
+  sources.forEach((source) => {
+    source.addEventListener('error', () => {
+      failedSources += 1;
+      if (failedSources === sources.length && video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
+        setPosterState('poster-fallback');
+      }
+    });
+  });
   if (poster) poster.addEventListener('error', () => slot.classList.add('has-error'));
 
   if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
