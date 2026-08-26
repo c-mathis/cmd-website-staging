@@ -120,6 +120,29 @@
   padding-top: 82%;
 }
 
+.main-site-page.home-page .about-profile_component.home {
+  grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+  gap: clamp(3rem, 6vw, 4.5rem);
+}
+
+.main-site-page.home-page .home-about-heading {
+  width: 100%;
+  max-width: none;
+}
+
+.main-site-page.home-page .home-about-heading :is(.heading-line-one, .heading-line-two) {
+  white-space: nowrap;
+}
+
+.main-site-page.home-page .home-about-heading-mobile {
+  margin: 0;
+}
+
+.main-site-page.home-page .home-about-heading-mobile span {
+  display: block;
+  white-space: nowrap;
+}
+
 .main-site-page.home-page .home-about-summary {
   margin-top: 2rem;
 }
@@ -154,6 +177,16 @@
   opacity: .72;
 }
 
+.main-site-page.home-page .section-faq-faq .home-faq-list,
+.main-site-page.home-page .section-faq-faq :is(.faq_list-wrapper, .faq_list, .faq_item, .track_component.is-faq) {
+  width: 100%;
+  max-width: none;
+}
+
+.main-site-page.home-page .section-faq-faq :is(.track-line, .track_progress.horizontal) {
+  height: .125rem;
+}
+
 @media screen and (max-width: 767px) {
   .main-site-page.home-page .section-about-profile .padding-vertical.padding-xhuge {
     padding-top: 4rem;
@@ -163,6 +196,11 @@
   .main-site-page.home-page .section-about-profile .image-showcase-vertical.home {
     max-width: 78%;
     padding-top: 85%;
+  }
+
+  .main-site-page.home-page .about-profile_component.home {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .main-site-page.home-page .home-about-summary {
