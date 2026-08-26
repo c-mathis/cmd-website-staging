@@ -110,23 +110,6 @@
 
 /* Keep Home proof and profile sections aligned with the internal-page rhythm. */
 
-@media screen and (min-width: 992px) {
-  .main-site-page.home-page .home-section-reversed ._2col_component {
-    display: grid;
-  }
-
-  .main-site-page.home-page .home-section-reversed ._2col_content-left {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .main-site-page.home-page .home-section-reversed ._2col_content-right {
-    grid-column: 1;
-    grid-row: 1;
-    align-items: flex-start;
-  }
-}
-
 .main-site-page.home-page .section-about-profile .padding-vertical.padding-xhuge {
   padding-top: clamp(4.5rem, 7vw, 6.5rem);
   padding-bottom: clamp(4.5rem, 7vw, 6.5rem);
