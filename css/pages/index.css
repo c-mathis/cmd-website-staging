@@ -146,6 +146,15 @@
   white-space: nowrap;
 }
 
+@media screen and (min-width: 992px) {
+  .main-site-page.home-page .home-about-heading :is(.heading-line-one, .heading-line-two) {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: var(--cmd-type-section);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+}
+
 .main-site-page.home-page .home-about-heading-mobile {
   margin: 0;
 }
