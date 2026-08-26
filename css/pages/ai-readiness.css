@@ -11,3 +11,58 @@
 .wsvc-page main .text-size-medium {
   font-size: var(--wsvc-type-body);
 }
+
+.wsvc-ai-testimonials .testimonial_component,
+.wsvc-ai-testimonials .testimonial_text-wrapper {
+  text-shadow: var(--wsvc-matte-text-shadow);
+}
+
+.wsvc-ai-testimonials .testimonial_text-wrapper {
+  padding-right: clamp(4rem, 7vw, 6rem);
+  padding-left: clamp(4rem, 7vw, 6rem);
+}
+
+.wsvc-ai-testimonials .testimonial_arrow-left,
+.wsvc-ai-testimonials .testimonial_arrow-right {
+  padding: 0;
+  color: var(--black);
+  font-family: 'FK Grotesk Neue', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.wsvc-ai-testimonials .testimonial_arrow-left {
+  justify-self: start;
+}
+
+.wsvc-ai-testimonials .testimonial_arrow-right {
+  justify-self: end;
+}
+
+.wsvc-ai-testimonials .testimonial_arrow-left:hover,
+.wsvc-ai-testimonials .testimonial_arrow-right:hover,
+.wsvc-ai-testimonials .testimonial_arrow-left:focus-visible,
+.wsvc-ai-testimonials .testimonial_arrow-right:focus-visible {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.wsvc-ai-testimonials .testimonial_arrow-left:focus-visible,
+.wsvc-ai-testimonials .testimonial_arrow-right:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.wsvc-ai-testimonials .swiper-button-disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+@media screen and (max-width: 767px) {
+  .wsvc-ai-testimonials .testimonial_text-wrapper {
+    min-height: 18rem;
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
+}
