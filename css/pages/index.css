@@ -116,13 +116,17 @@
 }
 
 .main-site-page.home-page .section-about-profile .image-showcase-vertical.home {
+  height: 100%;
   max-width: 100%;
-  padding-top: 118%;
+  padding-top: 0;
 }
 
 .main-site-page.home-page .about-profile_component.home {
   grid-template-columns: minmax(18rem, .8fr) minmax(0, 1.2fr);
-  gap: clamp(3rem, 6vw, 4.5rem);
+  grid-template-rows: auto auto;
+  column-gap: clamp(3rem, 6vw, 4.5rem);
+  row-gap: 1.5rem;
+  align-items: stretch;
 }
 
 .main-site-page.home-page .about-profile_component.home > .about-profile_content {
@@ -134,7 +138,13 @@
 .main-site-page.home-page .about-profile_component.home > .about-profile_image-wrapper.mobile-hide {
   grid-column: 1 !important;
   grid-row: 1 !important;
+  height: 100%;
   order: 1;
+}
+
+.main-site-page.home-page .home-about-cta {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .main-site-page.home-page .home-about-heading {
@@ -239,6 +249,7 @@
   }
 
   .main-site-page.home-page .section-about-profile .image-showcase-vertical.home {
+    height: auto;
     max-width: 78%;
     padding-top: 85%;
   }
@@ -249,7 +260,8 @@
   }
 
   .main-site-page.home-page .about-profile_component.home > .about-profile_content,
-  .main-site-page.home-page .about-profile_component.home > .about-profile_image-wrapper.mobile-hide {
+  .main-site-page.home-page .about-profile_component.home > .about-profile_image-wrapper.mobile-hide,
+  .main-site-page.home-page .home-about-cta {
     grid-column: auto !important;
     grid-row: auto !important;
     order: initial;
