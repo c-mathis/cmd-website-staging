@@ -121,8 +121,20 @@
 }
 
 .main-site-page.home-page .about-profile_component.home {
-  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, .85fr);
+  grid-template-columns: minmax(18rem, .8fr) minmax(0, 1.2fr);
   gap: clamp(3rem, 6vw, 4.5rem);
+}
+
+.main-site-page.home-page .about-profile_component.home > .about-profile_content {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  order: 2;
+}
+
+.main-site-page.home-page .about-profile_component.home > .about-profile_image-wrapper.mobile-hide {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  order: 1;
 }
 
 .main-site-page.home-page .home-about-heading {
@@ -154,7 +166,7 @@
 
 .main-site-page.home-page .home-about-credentials {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
   gap: 1.5rem 2rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
@@ -174,6 +186,30 @@
 .main-site-page.home-page .home-about-credential p {
   font-size: .92rem;
   line-height: 1.5;
+  opacity: .72;
+}
+
+.main-site-page.home-page .home-about-experience-list {
+  display: grid;
+  gap: .25rem;
+  font-size: .86rem;
+  line-height: 1.45;
+  opacity: .72;
+}
+
+.main-site-page.home-page .home-about-experience-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .6rem;
+}
+
+.main-site-page.home-page .home-about-year {
+  flex: none;
+  font-size: .68rem;
+  line-height: 1;
+  letter-spacing: .04em;
+  white-space: nowrap;
   opacity: .72;
 }
 
@@ -201,6 +237,13 @@
   .main-site-page.home-page .about-profile_component.home {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .main-site-page.home-page .about-profile_component.home > .about-profile_content,
+  .main-site-page.home-page .about-profile_component.home > .about-profile_image-wrapper.mobile-hide {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    order: initial;
   }
 
   .main-site-page.home-page .home-about-summary {
